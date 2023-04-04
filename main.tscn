@@ -1,0 +1,311 @@
+[gd_scene load_steps=19 format=3 uid="uid://chosn4weirsrm"]
+
+[ext_resource type="Texture2D" uid="uid://cnfin4bmqioei" path="res://icon.svg" id="1_d76t0"]
+[ext_resource type="Script" path="res://TitleBar.gd" id="1_ind84"]
+[ext_resource type="Script" path="res://main.gd" id="1_pqf63"]
+[ext_resource type="Theme" uid="uid://b1met1vuf0sd5" path="res://options_theme.tres" id="3_7p1o7"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0gw7s"]
+bg_color = Color(0.0862745, 0.105882, 0.141176, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_blend = true
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2wb1h"]
+bg_color = Color(0.0980392, 0.117647, 0.156863, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xrwni"]
+bg_color = Color(0.223529, 0.188235, 0.521569, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_olel8"]
+bg_color = Color(0.258824, 0.223529, 0.592157, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_blend = true
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ibusg"]
+bg_color = Color(0.0862745, 0.105882, 0.141176, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qox0q"]
+bg_color = Color(0.0862745, 0.105882, 0.141176, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xdf1i"]
+bg_color = Color(0.0862745, 0.105882, 0.141176, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1t7fd"]
+bg_color = Color(0.0862745, 0.105882, 0.141176, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_aj78g"]
+bg_color = Color(0.0862745, 0.105882, 0.141176, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_uifco"]
+bg_color = Color(0.0862745, 0.105882, 0.141176, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_55mkd"]
+bg_color = Color(0.0862745, 0.105882, 0.141176, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ix6fd"]
+bg_color = Color(0.054902, 0.0705882, 0.0980392, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0, 0, 0, 1)
+border_blend = true
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lvbkn"]
+bg_color = Color(0.223529, 0.188235, 0.521569, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_stint"]
+content_margin_left = 12.0
+content_margin_top = 12.0
+content_margin_right = 12.0
+content_margin_bottom = 12.0
+bg_color = Color(0.0862745, 0.105882, 0.141176, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0.223529, 0.188235, 0.521569, 1)
+border_blend = true
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[node name="Main" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_pqf63")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_0gw7s")
+
+[node name="Logo" type="Sprite2D" parent="."]
+position = Vector2(50, 100)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_d76t0")
+
+[node name="Title" type="Label" parent="."]
+custom_minimum_size = Vector2(200, 25)
+layout_mode = 0
+offset_left = 110.0
+offset_top = 75.0
+offset_right = 347.0
+offset_bottom = 114.0
+theme_override_font_sizes/font_size = 26
+text = "Godot Downloader"
+vertical_alignment = 1
+
+[node name="Version" type="Label" parent="."]
+custom_minimum_size = Vector2(200, 20)
+layout_mode = 0
+offset_left = 110.0
+offset_top = 105.0
+offset_right = 310.0
+offset_bottom = 128.0
+theme_override_font_sizes/font_size = 14
+text = "v 1.0"
+vertical_alignment = 1
+
+[node name="AboutButton" type="Button" parent="."]
+layout_mode = 0
+offset_left = 375.0
+offset_top = 82.0
+offset_right = 430.0
+offset_bottom = 113.0
+focus_mode = 0
+theme_override_colors/font_color = Color(0.498039, 0.498039, 0.498039, 1)
+theme_override_colors/font_hover_color = Color(0.498039, 0.498039, 0.498039, 1)
+text = "About"
+flat = true
+
+[node name="TitleBar" type="PanelContainer" parent="."]
+custom_minimum_size = Vector2(448, 50)
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = 1.0
+offset_top = 1.0
+offset_right = -1.0
+offset_bottom = 51.0
+grow_horizontal = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_2wb1h")
+script = ExtResource("1_ind84")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="TitleBar"]
+layout_mode = 2
+alignment = 2
+
+[node name="MinimizeButton" type="Button" parent="TitleBar/HBoxContainer"]
+custom_minimum_size = Vector2(30, 0)
+layout_mode = 2
+tooltip_text = "Minimize"
+focus_mode = 0
+text = "__"
+flat = true
+
+[node name="CloseButton" type="Button" parent="TitleBar/HBoxContainer"]
+custom_minimum_size = Vector2(30, 0)
+layout_mode = 2
+tooltip_text = "Close"
+focus_mode = 0
+text = "X"
+flat = true
+
+[node name="DownloadButton" type="Button" parent="."]
+custom_minimum_size = Vector2(170, 50)
+layout_mode = 0
+offset_left = 20.0
+offset_top = 150.0
+offset_right = 170.0
+offset_bottom = 200.0
+focus_mode = 0
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxFlat_xrwni")
+theme_override_styles/hover = SubResource("StyleBoxFlat_olel8")
+text = "Checking..."
+
+[node name="OSButton" type="OptionButton" parent="."]
+custom_minimum_size = Vector2(120, 50)
+layout_mode = 0
+offset_left = 210.0
+offset_top = 150.0
+offset_right = 341.0
+offset_bottom = 200.0
+focus_mode = 0
+theme = ExtResource("3_7p1o7")
+theme_override_font_sizes/font_size = 20
+flat = true
+alignment = 1
+item_count = 3
+selected = 0
+popup/item_0/text = "Windows"
+popup/item_0/id = 0
+popup/item_1/text = "macOS"
+popup/item_1/id = 1
+popup/item_2/text = "Linux"
+popup/item_2/id = 2
+
+[node name="ArchiButton" type="OptionButton" parent="."]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 0
+offset_left = 350.0
+offset_top = 150.0
+offset_right = 420.0
+offset_bottom = 200.0
+focus_mode = 0
+theme = ExtResource("3_7p1o7")
+theme_override_font_sizes/font_size = 20
+theme_override_styles/focus = SubResource("StyleBoxFlat_ibusg")
+theme_override_styles/normal = SubResource("StyleBoxFlat_qox0q")
+theme_override_styles/hover = SubResource("StyleBoxFlat_xdf1i")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_1t7fd")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxFlat_aj78g")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxFlat_uifco")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxFlat_55mkd")
+flat = true
+alignment = 1
+item_count = 2
+selected = 0
+popup/item_0/text = "x64"
+popup/item_0/id = 0
+popup/item_1/text = "x32"
+popup/item_1/id = 1
+
+[node name="ProgressBar" type="ProgressBar" parent="."]
+custom_minimum_size = Vector2(410, 25)
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 20.0
+offset_top = -40.0
+offset_right = -20.0
+offset_bottom = -15.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_styles/background = SubResource("StyleBoxFlat_ix6fd")
+theme_override_styles/fill = SubResource("StyleBoxFlat_lvbkn")
+value = 67.0
+show_percentage = false
+
+[node name="AboutDialog" type="AcceptDialog" parent="."]
+transparent_bg = true
+title = "About"
+borderless = true
+theme_override_styles/panel = SubResource("StyleBoxFlat_stint")
+
+[node name="AboutLabel" type="RichTextLabel" parent="AboutDialog"]
+custom_minimum_size = Vector2(300, 120)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -150.0
+offset_top = -60.0
+offset_right = 150.0
+offset_bottom = 60.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/normal_font_size = 18
+bbcode_enabled = true
+text = "Based on Godot Nightly [url=https://github.com/coppolaemilio/godot-nightly]Emilio Coppola[/url] and [url=https://github.com/coppolaemilio/godot-nightly/graphs/contributors]contributors[/url] 2019. Made with [url=https://godotengine.org]Godot Engine[/url] 4.0.1 in April 2023 by [url=https://github.com/OTJ40/godot_downloader]OTJ40[/url]
+
+"
+scroll_active = false
+context_menu_enabled = true
+
+[node name="HTTPRequest" type="HTTPRequest" parent="."]
+
+[connection signal="pressed" from="AboutButton" to="." method="_on_about_button_pressed"]
+[connection signal="gui_input" from="TitleBar" to="TitleBar" method="_on_gui_input"]
+[connection signal="pressed" from="TitleBar/HBoxContainer/MinimizeButton" to="TitleBar" method="_on_minimize_button_pressed"]
+[connection signal="pressed" from="TitleBar/HBoxContainer/CloseButton" to="TitleBar" method="_on_close_button_pressed"]
+[connection signal="pressed" from="DownloadButton" to="." method="_on_download_button_pressed"]
+[connection signal="item_selected" from="OSButton" to="." method="_on_os_button_item_selected"]
+[connection signal="item_selected" from="ArchiButton" to="." method="_on_archi_button_item_selected"]
+[connection signal="meta_clicked" from="AboutDialog/AboutLabel" to="." method="_on_about_label_meta_clicked"]
+[connection signal="request_completed" from="HTTPRequest" to="." method="_on_http_request_request_completed"]
